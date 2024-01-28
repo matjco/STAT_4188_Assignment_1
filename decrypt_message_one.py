@@ -41,3 +41,17 @@ encrypted_message = encrypted_file.readline()
 encrypted_file.close()
 
 # Write code below
+
+#invert the cipher
+reverse_cipher = {cipher[character] : character for character in cipher}
+
+message = []
+
+#append each decrypted character
+for character in encrypted_message:
+    message.append(reverse_cipher[character])
+
+#convert the list of characters into a string
+message_str = "".join(message)
+
+print(message_str)
